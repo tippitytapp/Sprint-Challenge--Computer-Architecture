@@ -92,6 +92,7 @@ class CPU:
         next_address = self.ram[self.pc]
         self.reg[SP] += 1
         self.pc = next_address
+
     def CMP(self):
         '''Compare the values in two registers.'''
         self.E = 0
@@ -152,7 +153,6 @@ class CPU:
         except FileNotFoundError:
             print(f"{sys.argv[0]}: {sys.argv[1]} Not found")
             sys.exit(2)
-
 
     def alu(self, op, reg_a, reg_b):
         """ALU operations."""
